@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix {
+    clear: both;
+}
+
+.container{
+    margin: 50px auto;
+    width: 90%;
+}
+
+.diagram {
+    border: 1px solid black;
+    width: 90%;
+    display: block;
+    clear: both;
+    height: 300px;
+    padding: 10px 5px 0px 5px  ;
+
+}
+
+.zipf-column {
+    float: left;
+    position: relative;
+    -webkit-transition: height 1s ease;
+    -moz-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    transition: height 1s ease;
+}
+
+.red {
+    background-color: #ef6b6b;
+}
+
+.blue {
+    background-color: #4f4fea;
+}
+
+.green {
+    background-color: #4ebf4e;
+}
+

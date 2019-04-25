@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+	<h1>100 Items</h1>
+	<div class="diagram" id="container1"></div>
+	<div class="clearfix"></div>
+
+	<h1>1000 Items</h1>
+	<div class="diagram" id="container2"></div>
+	<div class="clearfix"></div>
+
+	<h1>10000 Items</h1>
+	<div class="diagram" id="container3"></div>
+</div>
+<script type="text/javascript" src="zipf.js"></script>
+<script type="text/javascript" src="paint.js"></script>
+<script>
+    displayZipfDigram("container1", 100);
+    displayZipfDigram("container2", 1000);
+    displayZipfDigram("container3", 10000)
+</script>
+</body>
+</html>
