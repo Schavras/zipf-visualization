@@ -6,8 +6,8 @@ function displayZipfDigram(id, number) {
     const k = getLenghtsOfChains(number);
     const container = document.getElementById(id);
     let node = document.createElement("DIV");
-    node.id = id+"-0";
-    node.style.height = maxHeight + "px";
+    node.id = id + "-0";
+    node.style.height = "0px";
     node.style.width = (100 / k.lenghts.length) + "%";
     node.classList.add("red");
     node.classList.add("zipf-column");
@@ -16,7 +16,7 @@ function displayZipfDigram(id, number) {
 
     for (let i = 1; i < k.lenghts.length; i++) {
         node = document.createElement("DIV");
-        node.id = id+"-"+i;
+        node.id = id + "-" + i;
         let height = (k.lenghts[i] / k.lenghts[0]) * maxHeight;
         node.style.width = (100 / k.lenghts.length) + "%";
         node.style.height = "0px";
@@ -44,10 +44,14 @@ function displayZipfDigram(id, number) {
         container.appendChild(node);
     }
 
-    for (let i = 1; i < k.lenghts.length; i++) {
-        node = document.getElementById(id+"-"+i);
-        let height = (k.lenghts[i] / k.lenghts[0]) * maxHeight;
-        node.style.height = height + "px";
-    }
+    setTimeout(() => {
+        node.style.height = maxHeight + "px";
+        for (let i = 1; i < k.lenghts.length; i++) {
+            node = document.getElementById(id + "-" + i);
+            let height = (k.lenghts[i] / k.lenghts[0]) * maxHeight;
+            node.style.height = height + "px";
+        }
+    }, 500)
+
 }
 
