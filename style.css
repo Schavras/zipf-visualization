@@ -43,3 +43,14 @@
     background-color: #4ebf4e;
 }
 
+.button {
+    padding: 15px;
+    background-color: #c7d6ff;
+    border-radius: 32px;
+    border: none;
+}
+
+#refreshButton {
+    font-size: 25px;
+    float: right;
+}

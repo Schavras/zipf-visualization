@@ -6,32 +6,16 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-	<div>
-		<h1>100 Items</h1>
-		<h4 id="container1-info"></h4>
-		<div class="diagram" id="container1"></div>
-		<div class="clearfix"></div>
-	</div>
-
-	<h1>1.000 Items</h1>
-	<h4 id="container2-info"></h4>
-
-	<div class="diagram" id="container2"></div>
-	<div class="clearfix"></div>
-
-	<h1>10.000 Items</h1>
-	<h4 id="container3-info"></h4>
-	<div class="diagram" id="container3"></div>
-	<div class="clearfix"></div>
+<div class="container" id="container">
+	<button class="button" id="refreshButton" onclick="refreshDiagrams()">Refresh</button>
 
 </div>
 <script type="text/javascript" src="zipf.js"></script>
 <script type="text/javascript" src="paint.js"></script>
 <script>
-    displayZipfDigram("container1", 100);
-    displayZipfDigram("container2", 1000);
-    displayZipfDigram("container3", 10000)
+    displayItems(100);
+    displayItems(1000);
+    displayItems(10000);
 </script>
 </body>
 </html>

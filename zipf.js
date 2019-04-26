@@ -16,16 +16,13 @@ function getZipfChains(TOTAL_NUMBER) {
             for (let item of chain) {
                 flag = false;
                 if (item === n1) {
-                    // console.log("mpike sto 1 me index " + index)
                     index1 = index;
                     flag = true;
                 }
                 if (item === n2) {
                     index2 = index;
-                    // console.log("mpike sto 2 me index " + index)
                     flag = true;
                 }
-                // if (flag) break;
                 if (index1 && index2) break;
             }
             if (index1 && index2) break;
@@ -50,7 +47,7 @@ function getZipfChains(TOTAL_NUMBER) {
     chains.sort((a, b) => b.length - a.length);
     // printChain(chains);
     const valid = checkValidity(chains, TOTAL_NUMBER);
-    console.log(valid ? "Valid! :D" : "Not valid :(");
+    // console.log(valid ? "Valid! :D" : "Not valid :(");
     return valid ? chains : null;
 }
 
@@ -84,14 +81,12 @@ function checkValidity(chains, TOTAL_NUMBER) {
     return true;
 }
 
-function getLenghtsOfChains(totalNumber) {
+function getChainsSize(totalNumber) {
     const chains = getZipfChains(totalNumber);
     if (!chains) return {lenghts: [0], total: 0}
     const lenghts = [];
     for (let i = 0; i < chains.length; i++) {
         lenghts[i] = chains[i].length;
     }
-
-    const total = lenghts.reduce((p, c) => p ? p + c : 0);
-    return {lenghts: lenghts, total: total};
+    return lenghts
 }
