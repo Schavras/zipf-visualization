@@ -12,6 +12,11 @@
     width: 90%;
 }
 
+.container p {
+    font-size: 20px;
+
+}
+
 .diagram {
     border: 1px solid black;
     width: 90%;
@@ -21,6 +26,8 @@
     padding: 10px 5px 0px 5px;
 
 }
+
+
 
 .zipf-column {
     float: left;
